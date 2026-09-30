@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terminplaner Henry S.</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1b1b1f;
+    --muted: #5a5a63;
+    --accent: #3b5bfd;
+    --card: #f4f5f8;
+    --border: #e2e3e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14151a;
+      --fg: #eceef2;
+      --muted: #a4a6b0;
+      --accent: #8ea2ff;
+      --card: #1d1f27;
+      --border: #2c2e38;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  header {
+    padding: 40px 20px 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 { margin: 0 0 6px; font-size: 1.6rem; }
+  header p { margin: 0; color: var(--muted); }
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 16px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border);
+  }
+  nav a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  nav a:hover { text-decoration: underline; }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+  section {
+    margin-bottom: 48px;
+    scroll-margin-top: 24px;
+  }
+  section h2 {
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+  section h3 {
+    font-size: 1.05rem;
+    margin: 20px 0 6px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+  }
+  p { margin: 0 0 12px; white-space: pre-line; }
+  .stand { color: var(--muted); font-size: 0.9rem; margin-top: 20px; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    padding: 24px 20px 40px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Terminplaner Henry S.</h1>
+  <p>Termin- und Kundenverwaltung für den eigenen Betrieb</p>
+</header>
+
+<nav>
+  <a href="#start">Start</a>
+  <a href="#datenschutz">Datenschutzerklärung</a>
+  <a href="#nutzungsbedingungen">Nutzungsbedingungen</a>
+  <a href="#impressum">Impressum</a>
+</nav>
+
+<main>
+
+  <section id="start">
+    <h2>Über die App</h2>
+    <div class="card">
+      <p>Terminplaner Henry S. ist eine Android-App zur Verwaltung von Terminen, Kunden und Erinnerungen im eigenen Betrieb - mit Tages-, Wochen- und Übersichtsansicht, Kundenregister, Sprachdiktat und optionalem geräteübergreifendem Abgleich über das eigene Google-Konto.</p>
+      <p>Diese Seite enthält die rechtlich vorgeschriebenen Angaben zur App (Datenschutzerklärung, Nutzungsbedingungen, Impressum) - dieselben Texte finden sich auch direkt in der App unter Einstellungen → Rechtliches.</p>
+    </div>
+  </section>
+
+  <section id="datenschutz">
+    <h2>Datenschutzerklärung</h2>
+    <div class="card">
+      <h3>1. Verantwortlicher</h3>
+      <p>Thomas Berndt, Karlsfelde 15, 17335 Strasburg, E-Mail: terminplaner.app@gmail.com (siehe Impressum).</p>
+
+      <h3>2. Grundsatz: keine Datenübertragung an den Anbieter</h3>
+      <p>Alle Termine, Kunden- und Einstellungsdaten verbleiben grundsätzlich ausschließlich lokal auf diesem Gerät. Es findet keine Übermittlung an den Anbieter, an Werbenetzwerke oder sonstige Dritte statt. Die App enthält keine Analyse-, Tracking- oder Werbe-SDKs.</p>
+
+      <h3>2a. Optionaler geräteübergreifender Abgleich über Google Drive</h3>
+      <p>Wer möchte, kann in den Einstellungen ein eigenes Google-Konto verbinden, um Termine, Kundenparkplatz-Einträge und Schichten zwischen mehreren eigenen Geräten abzugleichen. Diese Funktion ist standardmäßig ausgeschaltet und wird nur durch aktives Verbinden des Kontos aktiviert. Dabei wird eine einzige, ausschließlich von dieser App angelegte Datei im Google Drive des eigenen Kontos gespeichert (Google "drive.file"-Berechtigung - die App erhält dadurch keinen Zugriff auf sonstige Dateien im Drive). Diese Datei liegt in der Cloud-Infrastruktur von Google; es gilt insoweit zusätzlich die Datenschutzerklärung von Google. Der Anbieter selbst hat keinen Zugriff auf diese Datei und erhält keine der darin enthaltenen Daten. Die Verbindung lässt sich in den Einstellungen jederzeit wieder trennen; die App fragt vor jedem Herunterladen eines neueren Standes von einem anderen Gerät explizit nach, bevor lokale Daten überschrieben werden.</p>
+
+      <h3>3. Lokal gespeicherte Daten</h3>
+      <p>- Termine, Notizen, Kategorien und das Kundenregister werden in einer lokalen Datenbank (Room/SQLite) auf dem Gerät gespeichert.
+- Einstellungen (z. B. Design, Zeitzone der Wochenansicht) werden in den lokalen SharedPreferences des Geräts gespeichert.
+- Automatische Sicherungen (wöchentlich, monatlich, zum Jahresabschluss) werden als JSON-Dateien in den öffentlichen Downloads-Ordner dieses Geräts geschrieben - nicht in eine Cloud und nicht zu einem Server des Anbieters.
+- Manueller Export/Import erzeugt bzw. liest ebenfalls nur lokale JSON-Dateien, die Sie selbst über die Dateiauswahl Ihres Geräts bestimmen.</p>
+
+      <h3>4. Berechtigungen und ihr Zweck</h3>
+      <p>- Benachrichtigungen (POST_NOTIFICATIONS): zur Anzeige von Termin-Erinnerungen.
+- Exakte Alarme (SCHEDULE_EXACT_ALARM): damit Erinnerungen pünktlich erscheinen.
+- Nach Neustart ausführen (RECEIVE_BOOT_COMPLETED): damit bereits geplante Erinnerungen nach einem Geräte-Neustart erhalten bleiben.
+- Vibration (VIBRATE): als Signal bei Erinnerungen.
+- Mikrofon (RECORD_AUDIO): ausschließlich für die optionale Spracheingabe beim Anlegen von Terminen. Die Spracherkennung selbst wird vom auf Ihrem Gerät installierten Standard-Sprachassistenten (in der Regel eine Google-Systemkomponente) durchgeführt; dabei kann die Sprachaufnahme durch diesen Drittanbieter verarbeitet werden. Terminplaner Henry S. selbst speichert oder überträgt keine Audiodaten. Es gilt in diesem Fall zusätzlich die Datenschutzerklärung des jeweiligen Spracherkennungsdienstes. Die Spracheingabe kann in den Einstellungen der App vollständig deaktiviert werden.
+- Speicherzugriff (WRITE_EXTERNAL_STORAGE, nur auf Geräten mit Android 9 oder älter nötig): zum Schreiben der automatischen Sicherungsdateien in den Downloads-Ordner.
+- Internet (INTERNET, ACCESS_NETWORK_STATE): ausschließlich für den unter 2a beschriebenen, optionalen Google-Drive-Abgleich. Ohne verbundenes Google-Konto baut die App keine Internetverbindung auf.</p>
+
+      <h3>5. Weitergabe an Dritte</h3>
+      <p>Über den unter 2a beschriebenen, ausdrücklich aktivierten Google-Drive-Abgleich hinaus findet keine Weitergabe von Daten an Dritte statt.</p>
+
+      <h3>6. Speicherdauer und Löschung</h3>
+      <p>Die Daten verbleiben so lange auf dem Gerät, bis Sie sie selbst löschen (einzelne Termine, das gesamte Kundenregister, exportierte/gesicherte Dateien) oder die App deinstallieren. Bei einer Deinstallation entfernt Android die lokale Datenbank und die Einstellungen automatisch; bereits im Downloads-Ordner abgelegte Sicherungsdateien bleiben davon unberührt und müssten separat gelöscht werden.</p>
+
+      <h3>7. Ihre Rechte</h3>
+      <p>Da sämtliche Daten ausschließlich lokal auf Ihrem eigenen Gerät liegen, haben Sie jederzeit vollen Zugriff, können Daten einsehen, exportieren, korrigieren oder löschen, ohne dass eine Anfrage an den Anbieter nötig ist. Für Fragen zum Datenschutz erreichen Sie den Anbieter über die im Impressum genannten Kontaktdaten.</p>
+
+      <h3>8. Kinder</h3>
+      <p>Die App richtet sich nicht gezielt an Kinder. Da keinerlei Daten erhoben oder übertragen werden, ergeben sich hieraus keine besonderen Risiken.</p>
+
+      <h3>9. Änderungen dieser Erklärung</h3>
+      <p>Diese Datenschutzerklärung wird bei Bedarf an geänderte Funktionen der App angepasst. Die jeweils aktuelle Fassung ist in der App unter Einstellungen → Rechtliches sowie auf dieser Seite einsehbar.</p>
+
+      <p class="stand">Stand: September 2026</p>
+    </div>
+  </section>
+
+  <section id="nutzungsbedingungen">
+    <h2>Nutzungsbedingungen</h2>
+    <div class="card">
+      <h3>1. Geltungsbereich</h3>
+      <p>Diese Nutzungsbedingungen gelten für die Nutzung der App "Terminplaner Henry S." (nachfolgend "die App"), bereitgestellt von Thomas Berndt (siehe Impressum).</p>
+
+      <h3>2. Leistungsbeschreibung</h3>
+      <p>Die App dient der persönlichen Termin- und Kundenverwaltung (Tages-, Wochen- und Übersichtsansicht, Erinnerungen, Kundenregister, Sprachdiktat, lokale Datensicherung). Sie ist für den privaten bzw. geschäftlichen Eigengebrauch der nutzenden Person bestimmt.</p>
+
+      <h3>3. Nutzung auf eigene Verantwortung</h3>
+      <p>Die Nutzung der App und die Richtigkeit der darin eingetragenen Termine liegen in der alleinigen Verantwortung der nutzenden Person. Die App ersetzt keine sicherheitskritische oder medizinisch notwendige Erinnerungsfunktion; für Termine mit besonderer Dringlichkeit (z. B. Medikamenteneinnahme) sollte zusätzlich ein weiteres, unabhängiges Erinnerungssystem genutzt werden.</p>
+
+      <h3>4. Keine Gewährleistung ununterbrochener Funktion</h3>
+      <p>Der Anbieter bemüht sich um einen fehlerfreien Betrieb, kann jedoch nicht garantieren, dass Erinnerungen unter allen Umständen (z. B. bei Akku-Sparmodus, deaktivierten Berechtigungen, Betriebssystem-Einschränkungen einzelner Hersteller oder fehlender Internetverbindung des Geräts für die Spracherkennung) pünktlich oder überhaupt erscheinen.</p>
+
+      <h3>5. Eigene Datensicherung</h3>
+      <p>Obwohl die App automatische Sicherungen anlegt, obliegt es der nutzenden Person, zusätzlich eigene Sicherungskopien wichtiger Daten aufzubewahren. Für den Verlust von Daten - etwa durch Deinstallation, Gerätewechsel, Geräteschaden oder versehentliches Löschen - wird keine Haftung übernommen (siehe auch Haftungsausschluss).</p>
+
+      <h3>6. Unzulässige Nutzung</h3>
+      <p>Untersagt sind insbesondere: das Zurückentwickeln (Reverse Engineering) der App über die gesetzlich zulässigen Grenzen hinaus, die Weiterverbreitung der App außerhalb der offiziellen Vertriebswege sowie jede Nutzung, die gegen geltendes Recht verstößt.</p>
+
+      <h3>7. Änderungen der App</h3>
+      <p>Der Anbieter kann die App im Rahmen von Updates funktional weiterentwickeln, anpassen oder einzelne Funktionen einstellen.</p>
+
+      <h3>8. Anwendbares Recht</h3>
+      <p>Es gilt das Recht der Bundesrepublik Deutschland.</p>
+
+      <h3>9. Salvatorische Klausel</h3>
+      <p>Sollte eine Bestimmung dieser Nutzungsbedingungen unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen davon unberührt.</p>
+
+      <h3>10. Kontakt</h3>
+      <p>Bei Fragen zu diesen Nutzungsbedingungen wenden Sie sich bitte an die im Impressum genannten Kontaktdaten.</p>
+    </div>
+  </section>
+
+  <section id="impressum">
+    <h2>Impressum</h2>
+    <div class="card">
+      <p>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)</p>
+      <p><strong>Diensteanbieter:</strong>
+Thomas Berndt
+Karlsfelde 15
+17335 Strasburg</p>
+      <p><strong>Kontakt:</strong>
+Telefon: 039753 / 259679
+E-Mail: terminplaner.app@gmail.com</p>
+      <p><strong>Verantwortlich für den Inhalt:</strong>
+Thomas Berndt (Anschrift wie oben)</p>
+      <p><strong>Umsatzsteuer-Identifikationsnummer:</strong> nicht vorhanden.</p>
+      <p><strong>Verbraucherstreitbeilegung / Universalschlichtungsstelle:</strong>
+Der Anbieter ist nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Terminplaner Henry S. &middot; diese Seite dient ausschließlich der rechtlich vorgeschriebenen Veröffentlichung von Datenschutzerklärung, Nutzungsbedingungen und Impressum.
+</footer>
+
+</body>
+</html>
